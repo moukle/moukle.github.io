@@ -1,25 +1,44 @@
+# Setup
+title: Moritz Klein
+# tagline: moukle
+url: https://moukle.github.io
+paginate: 1
+baseurl: ""
+permalink: pretty
+
+# Gems
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-paginate
   - jekyll-seo-tag
 
+# Optimize Jekyll
+exclude:
+  - .editorconfig
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
 
-collections:
-  authors:
-    output: true
+sass:
+  sass_dir: _sass
+  style: :compressed
 
-defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
+pages_list:
+    Blog: '/blog'
+
+# Options
+
+# Replace this value and uncomment to enable Google Analytics tracking
+# ga_analytics: UA-000000-0
+
+# Specify the author for blog posts
+author:
+  name: Moritz Klein
+  url: moukle.github.io
+  email: moritz.klein@pm.me
+
+# Custom vars
+version: 3.0.0
